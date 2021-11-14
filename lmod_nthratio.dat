@@ -1,0 +1,4 @@
+nthratio   3   0.001    1000.0    nthratio    mul 0 0
+Gamma    " "  2.0  1.001    1.001      5    10    0.01
+kT_e     keV  100      1        5   1000  1000    0.10
+kT_bb    keV  0.1      0        0     10    10    0.01
