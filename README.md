@@ -10,7 +10,7 @@ first-order correct the soft-excess introduced by *xillver*-based models
 
 ---
 
-## Instalation
+## Installation
 
 In order to use **NTHRATIO** one needs to have *HEASOFT* installed from source
 code to allow for XSPEC local models compilation. 
