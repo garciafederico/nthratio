@@ -24,13 +24,13 @@ code to allow for XSPEC local models compilation.
 
 ## Usage
 
-**NTHRATIO** is a *multiplicative* model to correct `xilver/relxill` models. For example, it can be invoked as:
+**NTHRATIO** is a *multiplicative* model to correct `xillver/relxill` models. For example, it can be invoked as:
 
 ```
-model tbabs*(diskbb+nthcomp+nthratio*relxillCp)
+model tbabs*(diskbb+nthcomp+relconv(xillverCp*nthratio))
 ```
 
-In such a case, `relxillCp` should be used with `refl_frac=-1`, and the parameters of **NTHRATIO** (`Gamma`, `kT_e`, `kT_bb`) should be tied to those from `nthcomp`, and `relxillCp`. It is important to remark that **NTHRATIO** does not add any new free parameter to the global model. 
+In such a case, `xillverCp` should be used with `refl_frac=-1`, and the parameters of **NTHRATIO** (`Gamma`, `kT_e`, `kT_bb`) should be tied to those from `nthcomp`, and `xillverCp`. It is important to remark that **NTHRATIO** does not add any new free parameter to the global model. 
 
 ## Important Note
 
