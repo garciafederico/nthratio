@@ -1,6 +1,6 @@
       SUBROUTINE nthratio(Ear,Ne,Param,Ifl,Photar,Photer)
       implicit none
-      INTEGER Ne , Ifl
+      INTEGER Ne , Ifl, i
       REAL Param(*) , Ear(0:Ne) , Photar(Ne), Photer(Ne)
       REAL PhotarkTin(Ne), Photar005(Ne)
       REAL ParamRNTHCOMP(6)
@@ -26,6 +26,12 @@ c     6: Energy in keV at which the model is unity
 
       photar = PhotarkTin/Photar005
       photer = 0.
+
+      do i=0,ne-1
+            if (ear(i) .gt. 100.0) then
+                  photar(i+1) = photar(i)
+            endif
+      enddo
 
       RETURN
       END
